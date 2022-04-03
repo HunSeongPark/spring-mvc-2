@@ -17,4 +17,4 @@
   - Spring Web
   - Thymeleaf
   - Lombok 
-  - Validation (only validation project)
+  - Validation (only validation, exception project)
