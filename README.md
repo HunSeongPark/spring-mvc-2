@@ -32,4 +32,6 @@
   - 타임리프는 `<`, `>`와 같은 HTML 태그를 `&lt;`, `&gt;`와 같은 HTML Entity로 변환하는 이스케이프(Escape)를 기본적으로 지원한다.
   - 그래서 다음과 같은 문자는 출력시 변경된다. `"Hello <b> Spring! </b>"` -> `"Hello &lt;b&gt; Spring! &lt;/b&gt;"`
   - 이러한 Escape를 적용하지 않고 그대로 출력하기 위한 타임리프 문법은 다음과 같다.
-  - `th:text` -> `th:utext` / `[[${data}]]` -> `[(${data})]`       
+  - `th:text` -> `th:utext` / `[[${data}]]` -> `[(${data})]`     
+  - ! 실제 서비스 개발에서 Escape를 사용하지 않아 발생하는 많은 문제들이 있으니 Unescape는 조심해서 꼭 필요할 때만 사용할 수 있도록 하자.
+  
