@@ -93,4 +93,4 @@
   - *Parameter를 가지는 fragment 적용*                  
   `<div th:replace="~{template/fragment/footer :: copyParam ('데이터1', '데이터2')}"></div>`                
 
-### message, internationalization
+### Message, Internationalization
