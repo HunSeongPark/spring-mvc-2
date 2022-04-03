@@ -49,3 +49,13 @@
   - `userMap['userA']['username']`
   - `userMap['userA'].getUsername()`
 
+- [기본 객체](https://github.com/HunSeongPark/spring-mvc-2/commit/7cf7cae8aa69e89c728ae6b365bb8b0ec33f4620)
+  - `${#request}` : HttpServletRequest
+  - `${#response}` : HttpServletResponse
+  - `${#session}` : HttpSession
+  - `${#servletContext}` : ApplicationContext
+  - `${#locale}` : Locale
+  - *편의 객체*
+  - `${session.sessionData}` : 세션 조회
+  - `${param.paramData}` : Parameter 조회
+  - `${@helloBean.hello('Spring!')}` : Bean 조회
