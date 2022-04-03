@@ -70,3 +70,25 @@
   - `@{/hello/{param1}/{param2}(param1=${param1}, param2=${param2})}` -> `/hello/data1/data2`
   - *Query Parameter + Path Variable*
   - `@{/hello/{param1}(param1=${param1}, param2=${param2})}` -> `/hello/data1?param2=data2`
+
+- [Template Fragment](https://github.com/HunSeongPark/spring-mvc-2/commit/0a1deea75d34ec5feaf8cfa76ac7d66e53674a46)
+  - 페이지의 공통 영역을 Fragment로 설정하여 적용할 수 있다.
+  ```
+  <footer th:fragment="copy"> 
+    푸터 자리 입니다.
+  </footer>
+  
+  <footer th:fragment="copyParam (param1, param2)">
+    <p>파라미터 자리 입니다.</p>
+    <p th:text="${param1}"></p>
+    <p th:text="${param2}"></p>
+  </footer>
+  ```
+  - `th:fragment="name"` 을 통해 fragment를 설정할 수 있으며, `th:fragment=name (param1, param2)"`를 통해 parameter를 가지는 fragment를 설정할 수 있다.
+  - fragment를 사용할 때는 다음과 같은 문법을 사용한다. 
+  - *th:insert를 통해 div 태그 내에 fragment 삽입*
+  `<div th:insert="~{template/fragment/footer :: copy}"></div>`
+  - *th:replace를 통해 div 태그를 fragment로 대체*
+  `<div th:replace="~{template/fragment/footer :: copy}"></div>`
+  - *Parameter를 가지는 fragment 적용*
+  `<div th:replace="~{template/fragment/footer :: copyParam ('데이터1', '데이터2')}"></div>`
