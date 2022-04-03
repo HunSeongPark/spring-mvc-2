@@ -5,6 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-  <div th:text="${{ipPort}}"></div>
+    <div>${number} : <span th:text="${number}"></span></div>
+    <div>${{number}} : <span th:text="${{number}}"></span></div>
+    <div>${ipPort} : <span th:text="${ipPort}"></span></div>
+    <div>${{ipPort}} : <span th:text="${{ipPort}}"></span></div>
 </body>
 </html>
