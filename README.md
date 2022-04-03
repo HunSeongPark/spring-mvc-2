@@ -35,7 +35,7 @@
   - `th:text` -> `th:utext` / `[[${data}]]` -> `[(${data})]`     
   - ! 실제 서비스 개발에서 Escape를 사용하지 않아 발생하는 많은 문제들이 있으니 Unescape는 조심해서 꼭 필요할 때만 사용할 수 있도록 하자.            
 
-- [SpringEL - 프로퍼티 접근]()
+- [SpringEL - 프로퍼티 접근](https://github.com/HunSeongPark/spring-mvc-2/commit/be2cd24552fed26cb75fa27aad37fa02ca9ebe62)
   - *Object*
   - `user.username`
   - `user['username']`
