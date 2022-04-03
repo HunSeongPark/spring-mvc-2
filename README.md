@@ -94,3 +94,25 @@
   `<div th:replace="~{template/fragment/footer :: copyParam ('데이터1', '데이터2')}"></div>`                
 
 ### Message, Internationalization
+- **Message** : 다양한 메시지를 한 곳에서 관리하도록 하는 기능
+```
+// messages.properties
+item=상품
+item.itemName=상품명
+``` 
+- 이러한 메시지를 타임리프 등에서 편하게 꺼내쓰고, 원할 때 해당 properties 파일을 수정하여 일괄적인 유지보수가 가능하다.
+- **Internationalization(국제화)** : HTTP 헤더 값의 `Accept-Language`를 인식하여 언어별로 위의 message 기능을 구분지어 놓는 것
+```
+// messages_en.properties
+item=Item
+item.itemName=Item Name
+```
+- 국제화를 통해 웹사이트에 다양한 언어 지원을 도와준다.
+- 스프링은 이러한 기본적인 메시지, 국제화 기능을 지원한다.
+- 스프링은 기본적인 메시지 관리 기능을 `MessageSource` 인터페이스를 통해 지원한다.
+- 스프링 부트를 사용하면 자동으로 `MessageSource`를 스프링 빈으로 등록하므로 편하게 사용할 수 있다.
+- application.properties에서 `spring.messages.basename=source1, source2 ,...`을 통해 메시지 소스를 지정할 수 있다. (기본값은 `messages` 이다.)
+- `messages_en.properties`와 같이 `_locale`을 파일명에 지정시, 자동으로 국제화가 이루어져 HTTP 헤더 값의 `Accept-Language`를 인식해 맞는 언어의 메시지가 적용된다.
+- `item=상품 {0}`와 같이 `{0}, {1}`을 통해 파라미터 지정이 가능하다.
+- 타임리프에서 `th:text=#{item.name}`과 같은 문법을 통해 메시지에 접근, 사용할 수 있다.
+-  `th:text=#{item.name(${item.itemName})}`과 같이 파라미터를 넘겨줄 수 있다.
