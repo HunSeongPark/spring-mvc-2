@@ -15,7 +15,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+
+import static hello.login.web.SessionConst.LOGIN_MEMBER;
 
 /**
  * Created by Hunseong on 2022/04/04
@@ -34,7 +37,7 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public String login(@Valid @ModelAttribute("loginForm") LoginForm form, BindingResult bindingResult, HttpServletResponse response) {
+    public String login(@Valid @ModelAttribute("loginForm") LoginForm form, BindingResult bindingResult, HttpServletRequest request) {
 
         if (bindingResult.hasErrors()) {
             return "login/loginForm";
@@ -48,14 +51,24 @@ public class LoginController {
             return "login/loginForm";
         }
 
-        // 로그인 성공 로직 수행
-        sessionManager.createSession(loginMember, response);
+        // ========= 로그인 성공 로직 수행 =========
+
+        // 세션이 존재하면 세션 반환, 없으면 새로 생성
+        HttpSession session = request.getSession();
+
+        // 세션에 로그인 정보 저장 (로그인 member 저장)
+        session.setAttribute(LOGIN_MEMBER, loginMember);
         return "redirect:/";
     }
 
     @PostMapping("/logout")
     public String logout(HttpServletRequest request) {
-        sessionManager.expire(request);
+
+        // 세션 삭제
+        HttpSession session = request.getSession(false);
+        if (session != null) {
+            session.invalidate();
+        }
         return "redirect:/";
     }
 
