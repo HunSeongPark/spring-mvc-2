@@ -92,3 +92,5 @@
   `<div th:replace="~{template/fragment/footer :: copy}"></div>`                  
   - *Parameter를 가지는 fragment 적용*                  
   `<div th:replace="~{template/fragment/footer :: copyParam ('데이터1', '데이터2')}"></div>`                
+
+### [message, internationalization](https://github.com/HunSeongPark/spring-mvc-2/tree/master/message)
