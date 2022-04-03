@@ -7,7 +7,7 @@
 * [Message, Internationalization](https://github.com/HunSeongPark/spring-mvc-2/tree/master/message)
 * [Validation](https://github.com/HunSeongPark/spring-mvc-2/tree/master/validation)
 * [Cookie, Session / Filter, Interceptor](https://github.com/HunSeongPark/spring-mvc-2/tree/master/login)
-* Exception Handling
+* [Exception Handling](https://github.com/HunSeongPark/spring-mvc-2/tree/master/exception)
 * Converter
 * File upload/download            
 
