@@ -86,9 +86,9 @@
   ```
   - `th:fragment="name"` 을 통해 fragment를 설정할 수 있으며, `th:fragment=name (param1, param2)"`를 통해 parameter를 가지는 fragment를 설정할 수 있다.
   - fragment를 사용할 때는 다음과 같은 문법을 사용한다. 
-  - *th:insert를 통해 div 태그 내에 fragment 삽입*
-  `<div th:insert="~{template/fragment/footer :: copy}"></div>`
-  - *th:replace를 통해 div 태그를 fragment로 대체*
-  `<div th:replace="~{template/fragment/footer :: copy}"></div>`
-  - *Parameter를 가지는 fragment 적용*
-  `<div th:replace="~{template/fragment/footer :: copyParam ('데이터1', '데이터2')}"></div>`
+  - *th:insert를 통해 div 태그 내에 fragment 삽입*               
+  `<div th:insert="~{template/fragment/footer :: copy}"></div>`                 
+  - *th:replace를 통해 div 태그를 fragment로 대체*                 
+  `<div th:replace="~{template/fragment/footer :: copy}"></div>`                  
+  - *Parameter를 가지는 fragment 적용*                  
+  `<div th:replace="~{template/fragment/footer :: copyParam ('데이터1', '데이터2')}"></div>`                
