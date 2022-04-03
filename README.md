@@ -28,7 +28,7 @@
 ------------------                   
                   
 ### Thymeleaf
-- Escape
+- [Escape](https://github.com/HunSeongPark/spring-mvc-2/commit/f231533baf73e6de831e7d415a438a29ce439097)
   - 타임리프는 `<`, `>`와 같은 HTML 태그를 `&lt;`, `&gt;`와 같은 HTML Entity로 변환하는 이스케이프(Escape)를 기본적으로 지원한다.
   - 그래서 다음과 같은 문자는 출력시 변경된다. `"Hello <b> Spring! </b>"` -> `"Hello &lt;b&gt; Spring! &lt;/b&gt;"`
   - 이러한 Escape를 적용하지 않고 그대로 출력하기 위한 타임리프 문법은 다음과 같다.
