@@ -9,7 +9,7 @@ import org.springframework.validation.Validator;
 /**
  * Created by Hunseong on 2022/04/04
  */
-@Component
+//@Component
 public class ItemValidator implements Validator {
 
     @Override
