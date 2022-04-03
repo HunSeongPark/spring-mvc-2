@@ -33,5 +33,19 @@
   - 그래서 다음과 같은 문자는 출력시 변경된다. `"Hello <b> Spring! </b>"` -> `"Hello &lt;b&gt; Spring! &lt;/b&gt;"`
   - 이러한 Escape를 적용하지 않고 그대로 출력하기 위한 타임리프 문법은 다음과 같다.
   - `th:text` -> `th:utext` / `[[${data}]]` -> `[(${data})]`     
-  - ! 실제 서비스 개발에서 Escape를 사용하지 않아 발생하는 많은 문제들이 있으니 Unescape는 조심해서 꼭 필요할 때만 사용할 수 있도록 하자.
-  
+  - ! 실제 서비스 개발에서 Escape를 사용하지 않아 발생하는 많은 문제들이 있으니 Unescape는 조심해서 꼭 필요할 때만 사용할 수 있도록 하자.            
+
+- [SpringEL - 프로퍼티 접근]()
+  - *Object*
+  - `user.username`
+  - `user['username']`
+  - `user.getUsername()`
+  - *List*
+  - `users[0].username`
+  - `users[0]['username']`
+  - `users[0].getUsername()`
+  - *Map*
+  - `userMap['userA'].username`
+  - `userMap['userA']['username']`
+  - `userMap['userA'].getUsername()`
+
