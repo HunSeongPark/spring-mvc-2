@@ -5,7 +5,7 @@
 ## Learning Skills
 * [Thymeleaf](https://github.com/HunSeongPark/spring-mvc-2/tree/master/thymeleaf)
 * [Message, Internationalization](https://github.com/HunSeongPark/spring-mvc-2/tree/master/message)
-* Validation
+* [Validation](https://github.com/HunSeongPark/spring-mvc-2/tree/master/validation)
 * Cookie, Session
 * Filter, Interceptor
 * Exception Handling
