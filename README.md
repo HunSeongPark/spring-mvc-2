@@ -114,5 +114,5 @@ item.itemName=Item Name
 - application.properties에서 `spring.messages.basename=source1, source2 ,...`을 통해 메시지 소스를 지정할 수 있다. (기본값은 `messages` 이다.)
 - `messages_en.properties`와 같이 `_locale`을 파일명에 지정시, 자동으로 국제화가 이루어져 HTTP 헤더 값의 `Accept-Language`를 인식해 맞는 언어의 메시지가 적용된다.
 - `item=상품 {0}`와 같이 `{0}, {1}`을 통해 파라미터 지정이 가능하다.
-- [타임리프에서 `th:text=#{item.name}`과 같은 문법을 통해 메시지에 접근, 사용할 수 있다.]((https://github.com/HunSeongPark/spring-mvc-2/commit/a23a4a05fc7048f3b5c919d99dd66444016bdb8f)
+- [타임리프에서 `th:text=#{item.name}`과 같은 문법을 통해 메시지에 접근, 사용할 수 있다.](https://github.com/HunSeongPark/spring-mvc-2/commit/a23a4a05fc7048f3b5c919d99dd66444016bdb8f)
 -  `th:text=#{item.name(${item.itemName})}`과 같이 파라미터를 넘겨줄 수 있다.
