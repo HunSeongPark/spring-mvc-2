@@ -8,7 +8,7 @@
 * [Validation](https://github.com/HunSeongPark/spring-mvc-2/tree/master/validation)
 * [Cookie, Session / Filter, Interceptor](https://github.com/HunSeongPark/spring-mvc-2/tree/master/login)
 * [Exception Handling](https://github.com/HunSeongPark/spring-mvc-2/tree/master/exception)
-* [Converter](https://github.com/HunSeongPark/spring-mvc-2/tree/master/converter)
+* [Converter / Formatter](https://github.com/HunSeongPark/spring-mvc-2/tree/master/converter)
 * File upload/download            
 
 ## Common Project Setting              
