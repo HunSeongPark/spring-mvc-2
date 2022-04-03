@@ -108,7 +108,7 @@ item=Item
 item.itemName=Item Name
 ```
 - 국제화를 통해 웹사이트에 다양한 언어 지원을 도와준다.
-- 스프링은 이러한 기본적인 메시지, 국제화 기능을 지원한다.
+- [스프링은 이러한 기본적인 메시지, 국제화 기능을 지원한다.](https://github.com/HunSeongPark/spring-mvc-2/commit/a23a4a05fc7048f3b5c919d99dd66444016bdb8f) 
 - 스프링은 기본적인 메시지 관리 기능을 `MessageSource` 인터페이스를 통해 지원한다.
 - 스프링 부트를 사용하면 자동으로 `MessageSource`를 스프링 빈으로 등록하므로 편하게 사용할 수 있다.
 - application.properties에서 `spring.messages.basename=source1, source2 ,...`을 통해 메시지 소스를 지정할 수 있다. (기본값은 `messages` 이다.)
