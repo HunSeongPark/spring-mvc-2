@@ -59,3 +59,14 @@
   - `${session.sessionData}` : 세션 조회
   - `${param.paramData}` : Parameter 조회
   - `${@helloBean.hello('Spring!')}` : Bean 조회
+
+- [URL 링크](https://github.com/HunSeongPark/spring-mvc-2/commit/95039fc472e2d9c5938ad85dc284e4db3016f0c5)
+  - 타임리프에서 URL 링크는 `@{...}` 표현식을 사용한다.
+  - *단순한 URL*
+  - `@{/hello}` -> `/hello`
+  - *Query Parameter*
+  - `@{/hello(param1=${param1}, param2=${param2})}` -> `/hello?param1=data1&param2=data2`
+  - *Path Variable*
+  - `@{/hello/{param1}/{param2}(param1=${param1}, param2=${param2})}` -> `/hello/data1/data2`
+  - *Query Parameter + Path Variable*
+  - `@{/hello/{param1}(param1=${param1}, param2=${param2})}` -> `/hello/data1?param2=data2`
