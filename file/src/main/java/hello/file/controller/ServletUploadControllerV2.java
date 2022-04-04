@@ -60,7 +60,6 @@ public class ServletUploadControllerV2 {
             //데이터 읽기
             InputStream inputStream = part.getInputStream();
             String body = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
-            log.info("body={}", body);
 
             //파일에 저장하기
             if (StringUtils.hasText(part.getSubmittedFileName())) {
